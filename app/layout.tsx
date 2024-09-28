@@ -1,4 +1,7 @@
 import Container from '@/components/shared/container'
+import HomeNavbar from '@/components/shared/layout/HomeNavbar'
+import RightSideBar from '@/components/shared/layout/RightSideBar'
+import { Sidebar } from '@/components/shared/layout/Sidebar'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
@@ -26,10 +29,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				<Container>{children}</Container>
+			<body>
+				<div className='flex'>
+					<Sidebar />
+					<div className='flex flex-col'>
+						<HomeNavbar />
+						<div className='flex'>
+							<Container>{children}</Container>
+							<RightSideBar />
+						</div>
+					</div>
+				</div>
 			</body>
 		</html>
 	)

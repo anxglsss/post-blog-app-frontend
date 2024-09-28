@@ -23,8 +23,8 @@ const Home = () => {
 	}, [])
 
 	return (
-		<div>
-			<h1>Список постов</h1>
+		<div className='text-white'>
+			<h1>Posts</h1>
 			{error && <p style={{ color: 'red' }}>{error}</p>}
 			<ul>
 				{posts.map((post, index) => (
@@ -34,6 +34,12 @@ const Home = () => {
 					</li>
 				))}
 			</ul>
+			<div className='flex'>
+				<h1>;lkmsd;dcxojmsdpocxes</h1>
+				<h1>;lkwdnmcaa;oiwsjnm</h1>
+				<h1>oinawcoiaahwenhodsadxs</h1>
+				eojmadcfp;oidw;jmcps;ndcmlidnhjcoisjhd f9oxiweruyhirfw4eujhkn.
+			</div>
 		</div>
 	)
 }
