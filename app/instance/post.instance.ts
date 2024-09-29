@@ -2,12 +2,13 @@ import { ICreatePost } from '../types/post'
 import { axiosInstance } from './axios.instance'
 
 export async function getPosts() {
-	return await axiosInstance.get('/post')
+	const res = axiosInstance.get('/post')
+	return (await res).data
 }
 export async function createPost(data: ICreatePost) {
 	try {
-		await axiosInstance.post('/post', data)
-		return data
+		const res = axiosInstance.post('/post', data)
+		return (await res).data
 	} catch (error) {
 		console.log(error)
 		throw error

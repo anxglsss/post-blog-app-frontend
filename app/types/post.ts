@@ -9,3 +9,7 @@ export interface IUpdatePost {
 	content?: string
 	authorId?: number
 }
+
+export interface IPost extends ICreatePost {
+	id: number
+}

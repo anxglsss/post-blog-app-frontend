@@ -4,6 +4,7 @@ import RightSideBar from '@/components/shared/layout/RightSideBar'
 import { Sidebar } from '@/components/shared/layout/Sidebar'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
 
 const geistSans = localFont({
@@ -30,11 +31,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<div className='flex'>
+				<div className='flex h-screen'>
+					<Toaster reverseOrder={false} />
 					<Sidebar />
 					<div className='flex flex-col'>
 						<HomeNavbar />
-						<div className='flex'>
+						<div className='flex justify-between'>
 							<Container>{children}</Container>
 							<RightSideBar />
 						</div>

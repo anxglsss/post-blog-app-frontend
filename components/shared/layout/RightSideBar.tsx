@@ -1,6 +1,6 @@
 const RightSideBar = () => {
 	return (
-		<div className='w-full lg:w-64 p-4 space-y-4'>
+		<div className='w-64 p-4 space-y-4'>
 			<div className='bg-zinc-900 border-white border-opacity-25 border-12 pr-12 pl-8 py-6 border rounded-[10px] shadow-md text-white'>
 				<h2 className='text-xl font-bold mb-4'>Statistics</h2>
 				<hr className='my-4 border-gray-500' />
