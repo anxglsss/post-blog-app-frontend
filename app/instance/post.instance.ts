@@ -5,10 +5,11 @@ export async function getPosts() {
 	const res = axiosInstance.get('/post')
 	return (await res).data
 }
+
 export async function createPost(data: ICreatePost) {
 	try {
-		const res = axiosInstance.post('/post', data)
-		return (await res).data
+		const res = await axiosInstance.post('/post', data)
+		return res.data
 	} catch (error) {
 		console.log(error)
 		throw error
